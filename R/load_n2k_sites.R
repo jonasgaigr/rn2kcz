@@ -8,10 +8,16 @@
 #' @examples 
 #' natura_sites <- load_n2k_sites()
 #' 
-load_n2k_sites <- function() {
+load_n2k_sites <- function(return = FALSE, envir = globalenv()) {
+  
   sites_subjects <- openxlsx::read.xlsx("https://webgis.nature.cz/publicdocs/opendata/natura2000/seznam_predmetolokalit_Natura2000_440_2021.xlsx",
                                         sheet = 1)
   colnames(sites_subjects) <- c("site_code", "site_name", "site_type", "feature_type", "feature_code", "nazev_cz", "nazev_lat")
   
-  return(sites_subjects)
+  assign("sites_subjects", sites_subjects, envir = envir)
+  
+  if(return == TRUE) {
+    return(sites_subjects)
+  }
+  
 }

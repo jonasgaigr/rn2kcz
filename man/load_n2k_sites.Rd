@@ -4,7 +4,7 @@
 \alias{load_n2k_sites}
 \title{Load Natura 2000 sites}
 \usage{
-load_n2k_sites()
+load_n2k_sites(return = FALSE, envir = globalenv())
 }
 \arguments{
 \item{NULL}{the function takes no arguments}
