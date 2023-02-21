@@ -14,10 +14,17 @@ load_n2k_sites <- function(return = FALSE, envir = globalenv()) {
                                         sheet = 1)
   colnames(sites_subjects) <- c("site_code", "site_name", "site_type", "feature_type", "feature_code", "nazev_cz", "nazev_lat")
   
-  assign("sites_subjects", sites_subjects, envir = envir)
-  
   if(return == TRUE) {
+    
+    assign("sites_subjects", sites_subjects, envir = envir)
+    
     return(sites_subjects)
+  
+  } else {
+    
+    assign("sites_subjects", sites_subjects, envir = envir)
+    
   }
   
 }
+
