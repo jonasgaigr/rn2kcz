@@ -9,7 +9,7 @@
 #' natura_sites <- load_n2k_sites()
 #' 
 load_n2k_sites <- function() {
-  sites_subjects <- openxlsx::read.xlsx("https://webgis.nature.cz/publicdocs/opendata/natura2000/seznam_predmetolokalit_Natura2000_440_2021.xlsx",
+  sites_subjects <- openxlsx::read.xlsx("https://webgis.nature.cz/publicdocs/opendata/natura2000/seznam_predmetolokalit_Natura2000_2_2025.xlsx.xlsx",
                                         sheet = 1)
   colnames(sites_subjects) <- c("site_code", "site_name", "site_type", "feature_type", "feature_code", "nazev_cz", "nazev_lat")
   
