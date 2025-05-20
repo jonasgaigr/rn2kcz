@@ -6,3 +6,10 @@
 install.packages("remotes")
 remotes::install_github("jonasgaigr/rn2kcz")
 ```
+# Usage
+```
+library(rn2kcz)
+
+load_n2k_sites()
+head(sites_subjects)
+```
